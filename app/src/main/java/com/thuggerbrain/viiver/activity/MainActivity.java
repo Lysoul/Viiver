@@ -9,8 +9,10 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 import com.thuggerbrain.viiver.R;
+import com.thuggerbrain.viiver.adapter.ToggleListAdapter;
 import com.thuggerbrain.viiver.fragment.FragmentMain;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,7 +20,27 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private Toolbar toolbar;
+    private ListView listviewtoggle;
 
+    String[] itemname ={
+            "จัดการบัญชี",
+            "ออเดอร์ส่งของ",
+            "กระเป๋าเงิน",
+            "วิธีใช้งาน",
+            "ตั้งค่า",
+            "ข้อเสนอแนะ",
+            "เกี่ยวกับเรา"
+    };
+
+    Integer[] imgid={
+            R.drawable.ic_account_circle_black_24dp,
+            R.drawable.ic_account_circle_black_24dp,
+            R.drawable.ic_account_circle_black_24dp,
+            R.drawable.ic_account_circle_black_24dp,
+            R.drawable.ic_account_circle_black_24dp,
+            R.drawable.ic_account_circle_black_24dp,
+            R.drawable.ic_account_circle_black_24dp
+    };
 
 
     @Override
@@ -41,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
     public void initInstances(){
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        listviewtoggle = (ListView) findViewById(R.id.listviewtoggle);
+
+        listviewtoggle.setAdapter(new ToggleListAdapter(MainActivity.this,itemname,imgid));
 
 
         setSupportActionBar(toolbar);

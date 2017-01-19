@@ -1,7 +1,7 @@
 package com.thuggerbrain.viiver.activity;
 
+import android.content.Intent;
 import android.content.res.Configuration;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -11,17 +11,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.thuggerbrain.viiver.R;
 import com.thuggerbrain.viiver.adapter.ToggleListAdapter;
 import com.thuggerbrain.viiver.fragment.FragmentMain;
-import com.thuggerbrain.viiver.fragment.FragmentSpashpage;
 
-public class MainActivity extends AppCompatActivity implements FragmentSpashpage.OnFragmentInteractionListener {
+
+public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
@@ -49,7 +46,6 @@ public class MainActivity extends AppCompatActivity implements FragmentSpashpage
     };
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,8 +57,9 @@ public class MainActivity extends AppCompatActivity implements FragmentSpashpage
                     .add(R.id.contentContainer, FragmentMain.newInstance())
                     .commit();
         }
-        runSpashPage(3000);
+
     }
+
 
 
     public void initInstances() {
@@ -115,33 +112,5 @@ public class MainActivity extends AppCompatActivity implements FragmentSpashpage
         return super.onOptionsItemSelected(item);
     }
 
-
-
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
-    }
-
-
-    private void runSpashPage(int i) {
-        final ImageView spashImage = (ImageView) findViewById(R.id.spashpage);
-        final TextView  textCoppyRight = (TextView) findViewById(R.id.coppyright) ;
-        textCoppyRight.setVisibility(View.VISIBLE);
-        spashImage.setVisibility(View.VISIBLE);
-        final Handler spashHandler = new Handler();
-        spashHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                textCoppyRight.setVisibility(View.GONE);
-                spashImage.setVisibility(View.GONE);
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-
-                }
-            }
-        }, i);
-    }
 
 }

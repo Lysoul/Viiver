@@ -6,7 +6,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 import com.thuggerbrain.viiver.R;
-import com.thuggerbrain.viiver.activity.MainActivity;
+import com.thuggerbrain.viiver.activity.LoginActivity;
 
 public class SpashScreen extends AppCompatActivity {
 
@@ -25,7 +25,9 @@ public class SpashScreen extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent objSpash = new Intent(getApplicationContext(),MainActivity.class);
+
+
+                Intent objSpash = new Intent(getApplicationContext(),LoginActivity.class);
                 startActivity(objSpash);
                 finish();
             }

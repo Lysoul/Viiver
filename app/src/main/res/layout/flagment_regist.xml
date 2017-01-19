@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context="com.thuggerbrain.viiver.fragment.FlagmentRegist">
+
+    <TextView
+        android:layout_above="@+id/usernameRegist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrations"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/usernameRegist"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shape_rectangle"
+                    android:hint="email"
+                    android:inputType="textEmailAddress"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    android:id="@+id/passwordRegist"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/usernameRegist"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/shape_rectangle"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/passwordRegist"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/shape_rectangle"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

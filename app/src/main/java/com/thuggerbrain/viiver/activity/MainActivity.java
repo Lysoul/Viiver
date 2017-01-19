@@ -1,9 +1,7 @@
 package com.thuggerbrain.viiver.activity;
 
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -32,10 +30,12 @@ public class MainActivity extends AppCompatActivity {
             "วิธีใช้งาน",
             "ตั้งค่า",
             "ข้อเสนอแนะ",
-            "เกี่ยวกับเรา"
+            "เกี่ยวกับเรา",
+            "ออกจากระบบ"
     };
 
     Integer[] imgid = {
+            R.drawable.ic_account_circle_black_24dp,
             R.drawable.ic_account_circle_black_24dp,
             R.drawable.ic_account_circle_black_24dp,
             R.drawable.ic_account_circle_black_24dp,

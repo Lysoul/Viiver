@@ -1,11 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_sampleprofile_backgroud" />
+
     <TextView
+        android:id="@+id/tvUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Profile Fragment"/>
+        android:layout_alignLeft="@id/imgProfile"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Nan nakojump"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tvUsername"
+        android:layout_below="@id/tvUsername"
+        android:paddingTop="4dp"
+        android:text="Quality"
+        android:textSize="14sp" />
+
+
+    <RatingBar
+        android:id="@+id/rating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tvRating"
+        android:layout_toRightOf="@id/tvRating"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:paddingLeft="4dp"
+        android:stepSize="0.1" />
+
+
+    <ImageButton
+        android:id="@+id/ibtnFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/imgProfile"
+        android:layout_alignTop="@id/tvUsername"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/ic_account_circle_black_24dp" />
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ibtnFollow"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/ibtnFollow"
+        android:background="@drawable/ic_account_circle_black_24dp" />
+
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignBottom="@id/imgProfile"
+        android:layout_alignRight="@id/imgProfile"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#ffffff"
+        android:text="โทรเลย"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/btnHire"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignTop="@id/btnCall"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/btnCall"
+        android:background="@color/colorPrimary"
+        android:text="จ้างเลย"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/gbtnMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgProfile"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:text="ส่งแล้ว"
+            android:background="#ffffff"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginRight="-8dip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="คนส่งของ"
+            android:background="#ffffff"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginRight="-8dip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="รับแล้ว"
+            android:background="#ffffff"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginRight="-8dip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/gbtnMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cvMain"
+        >
+
+        <TextView
+            android:layout_gravity="center"
+            android:text="Text in First Cardview."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/cvMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cvMainsec"
+        >
+
+        <TextView
+            android:layout_gravity="center"
+            android:text="Text in Second Cardview."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

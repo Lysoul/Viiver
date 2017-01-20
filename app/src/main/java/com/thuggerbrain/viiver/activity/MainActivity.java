@@ -1,11 +1,11 @@
 package com.thuggerbrain.viiver.activity;
 
 import android.content.res.Configuration;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,6 +15,7 @@ import com.thuggerbrain.viiver.R;
 import com.thuggerbrain.viiver.adapter.ToggleListAdapter;
 import com.thuggerbrain.viiver.fragment.FragmentMain;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
@@ -22,17 +23,19 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private ListView listviewtoggle;
 
-    String[] itemname ={
+    String[] itemname = {
             "จัดการบัญชี",
             "ออเดอร์ส่งของ",
             "กระเป๋าเงิน",
             "วิธีใช้งาน",
             "ตั้งค่า",
             "ข้อเสนอแนะ",
-            "เกี่ยวกับเรา"
+            "เกี่ยวกับเรา",
+            "ออกจากระบบ"
     };
 
-    Integer[] imgid={
+    Integer[] imgid = {
+            R.drawable.ic_account_circle_black_24dp,
             R.drawable.ic_account_circle_black_24dp,
             R.drawable.ic_account_circle_black_24dp,
             R.drawable.ic_account_circle_black_24dp,
@@ -47,25 +50,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         initInstances();
 
-        if(savedInstanceState == null){
+        if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.contentContainer, FragmentMain.newInstance())
                     .commit();
         }
 
-
     }
 
 
-    public void initInstances(){
+
+    public void initInstances() {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         listviewtoggle = (ListView) findViewById(R.id.listviewtoggle);
 
-        listviewtoggle.setAdapter(new ToggleListAdapter(MainActivity.this,itemname,imgid));
+        listviewtoggle.setAdapter(new ToggleListAdapter(MainActivity.this, itemname, imgid));
 
 
         setSupportActionBar(toolbar);
@@ -97,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu,menu);
+        getMenuInflater().inflate(R.menu.main_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 

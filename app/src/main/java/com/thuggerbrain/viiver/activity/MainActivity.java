@@ -1,5 +1,6 @@
 package com.thuggerbrain.viiver.activity;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -61,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     public void initInstances() {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -106,8 +106,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        if (actionBarDrawerToggle.onOptionsItemSelected(item))
+        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
             return true;
+        }
+
+       switch (item.getItemId())
+
+       {case R.id.action_notification:
+           Intent gotoNotifications = new Intent(getApplicationContext(),NotificationsActivity.class);
+       startActivity(gotoNotifications);
+       return true;
+       }
+
 
         return super.onOptionsItemSelected(item);
     }

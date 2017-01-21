@@ -3,36 +3,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
+
     android:orientation="vertical"
-    tools:context="com.thuggerbrain.viiver.fragment.FlagmentRegist">
+    tools:context="com.thuggerbrain.viiver.fragment.FragmentMain">
 
     <TextView
         android:layout_above="@+id/usernameRegist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="italic"
         android:text="Registrations"
         android:textColor="@color/colorWhite"
-        android:textSize="30sp" />
+        android:textSize="26sp" />
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="horizontal">
 
 
             <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shape_rectangle"
+                    android:hint="ชื่อ"
+                    android:inputType="textEmailAddress"
+                    android:textSize="18sp"
+                    android:layout_marginTop="18dp"
+                    android:textStyle="normal" />
+                <EditText
+                    android:layout_below="@id/username"
+                    android:id="@+id/lastusername"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shape_rectangle"
+                    android:hint="นามสกุล"
+                    android:inputType="textEmailAddress"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+                <EditText
+                    android:layout_below="@id/lastusername"
                     android:id="@+id/usernameRegist"
+                    android:layout_marginTop="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:background="@drawable/shape_rectangle"
@@ -46,25 +72,47 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_below="@id/usernameRegist"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="8dp"
                     android:background="@drawable/shape_rectangle"
-                    android:hint="Password"
+                    android:hint="พาสเวิดส์"
                     android:inputType="textPassword"
                     android:textSize="18sp"
                     android:textStyle="normal" />
 
                 <EditText
+                    android:id="@+id/confirmpassword"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_below="@id/passwordRegist"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/shape_rectangle"
-                    android:hint="Password"
+                    android:hint="ยืนยันพาสเวิดส์"
                     android:inputType="textPassword"
                     android:textSize="18sp"
                     android:textStyle="normal" />
+                <EditText
+                    android:hint="เบอร์โทรศัพ์"
+                    android:layout_below="@id/confirmpassword"
+                    android:inputType="number"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shape_rectangle"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
+
+                    />
+
+                <Button
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/btnLogin"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button"
+                    android:text="Sign In"
+                    android:textColor="@color/colorWhite" />
             </RelativeLayout>
+
         </LinearLayout>
-    </ScrollView>
+
 
 </LinearLayout>

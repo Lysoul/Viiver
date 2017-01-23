@@ -14,13 +14,12 @@ public class NotificationsActivity extends AppCompatActivity implements Fragment
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notifications);
-        if (savedInstanceState==null)
-        {
+        if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.ContainerNotifications, FragmentNotifications.newInstance())
                     .commit();
         }
-}
+    }
 
     @Override
     public void onFragmentInteraction(Uri uri) {

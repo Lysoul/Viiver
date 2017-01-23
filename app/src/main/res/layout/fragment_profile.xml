@@ -159,11 +159,22 @@
                     android:orientation="horizontal">
 
 
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/infohistory"
+                            android:layout_gravity="right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/imgProfile"
+                            android:layout_alignTop="@id/tvUsername"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/ic_account_circle_black_24dp" />
 
                         <ImageView
                             android:id="@+id/sdProfileimage"
@@ -179,31 +190,16 @@
                             android:layout_gravity="center"
                             android:text="Nan nakojump" />
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:gravity="center"
-                            android:text="I need to send computer to"
+                            android:text="Some thing replace here rating ..."
                             android:textColor="#ff7700"
                             android:textSize="10sp"
                             android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:maxLines="1"
-                            android:text="------------------>"
-                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -215,27 +211,7 @@
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
 
-                        <ImageView
-                            android:id="@+id/sdProfileimage2"
-                            android:layout_width="46dp"
-                            android:layout_height="46dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_sample_profile" />
-
-                        <TextView
-                            android:id="@+id/sdProfilename2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Keroaz Agisz" />
-
-                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -243,7 +219,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:orientation="vertical"
                     android:padding="20dp">
 
@@ -268,26 +243,57 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:gravity="right"
-                        android:text="10 Monday 2017" />
+                        android:layout_marginTop="5dp"
+                        >
 
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        <TextView
 
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_weight="0"
+                            android:textSize="8dp"
+                            android:gravity="right"
+                            android:text="10 Monday 2017" />
+                        <TextView
+                            android:id="@+id/whoreceivertext"
+                            android:gravity="left"
+                            android:text="ผู้ส่งของ"
+                            android:textSize="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_toRightOf="@id/whoreceivertext"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/whodelivery"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
                             android:src="@drawable/ic_sample_profile" />
 
-
-                    </LinearLayout>
+                        <TextView
+                            android:id="@+id/whoreceiver"
+                            android:text="ผู้รับ"
+                            android:textSize="8dp"
+                            android:layout_toRightOf="@id/whodelivery"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:layout_toRightOf="@id/whodelivery"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_marginLeft="25dp"
+                            android:src="@drawable/ic_sample_profile" />
+                    </RelativeLayout>
 
 
                 </LinearLayout>

@@ -11,8 +11,6 @@ import android.widget.TextView;
 
 import com.thuggerbrain.viiver.R;
 
-import java.util.List;
-
 /**
  * Created by jakkavat on 1/18/2017 AD.
  */
@@ -43,7 +41,7 @@ public class ToggleListAdapter extends ArrayAdapter<String> {
         imageView.setImageResource(imgid[position]);
         return rowView;
 
-    };
+    }
 
 
 }

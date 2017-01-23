@@ -13,12 +13,12 @@ import com.thuggerbrain.viiver.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link FlagmentRegist.OnFragmentInteractionListener} interface
+ * {@link FragmentRegist.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link FlagmentRegist#newInstance} factory method to
+ * Use the {@link FragmentRegist#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FlagmentRegist extends Fragment {
+public class FragmentRegist extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,15 +30,15 @@ public class FlagmentRegist extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public FlagmentRegist() {
+    public FragmentRegist() {
         // Required empty public constructor
     }
 
 
 
     // TODO: Rename and change types and number of parameters
-    public static FlagmentRegist newInstance() {
-        FlagmentRegist fragment = new FlagmentRegist();
+    public static FragmentRegist newInstance() {
+        FragmentRegist fragment = new FragmentRegist();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -57,7 +57,7 @@ public class FlagmentRegist extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.flagment_regist, container, false);
+        return inflater.inflate(R.layout.fragment_regist, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

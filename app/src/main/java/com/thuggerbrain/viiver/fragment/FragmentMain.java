@@ -2,17 +2,19 @@ package com.thuggerbrain.viiver.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.PopupMenu;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.Toast;
 
-import com.inthecheesefactory.thecheeselibrary.view.SlidingTabLayout;
 import com.thuggerbrain.viiver.R;
 
 
@@ -20,9 +22,10 @@ import com.thuggerbrain.viiver.R;
  * Created by jakkavat on 1/15/2017 AD.
  */
 @SuppressWarnings("unused")
-public class FragmentMain extends Fragment {
+public class FragmentMain extends Fragment implements View.OnClickListener {
     private ViewPager viewPager;
     private TabLayout tabLayout;
+
     private int[] tabIcons = {
             R.drawable.ic_search_white_36dp,
             R.drawable.ic_notifications_white_36dp,
@@ -56,6 +59,9 @@ public class FragmentMain extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         initInstances(rootView, savedInstanceState);
+        FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fabmainbtn);
+        fab.setOnClickListener(this);
+
         return rootView;
     }
 
@@ -150,5 +156,34 @@ public class FragmentMain extends Fragment {
     private void onRestoreInstanceState(Bundle savedInstanceState) {
         // Restore Instance State here
     }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.fabmainbtn:
+                PopupMenu popupMenu = new PopupMenu(getActivity(), v);
+                MenuInflater menuInflater = popupMenu.getMenuInflater();
+                menuInflater.inflate(R.menu.main_floatpopup, popupMenu.getMenu());
+                popupMenu.show();
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        switch(item.getItemId()) {
+                            case R.id.senderitembtn:
+                                Toast.makeText(getActivity(), "Sender Button", Toast.LENGTH_LONG).show();
+                                return true;
+                            case R.id.deliverdefindlocatinobtn:
+                                Toast.makeText(getActivity(), "Delivery Button", Toast.LENGTH_LONG).show();
+                                return true;
+                        }
+                        return false;
+                    }
+                });
+
+
+        }
+    }
+
+
 
 }

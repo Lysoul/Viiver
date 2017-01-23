@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.thuggerbrain.viiver.R;
-import com.thuggerbrain.viiver.fragment.FlagmentRegist;
+import com.thuggerbrain.viiver.fragment.FragmentRegist;
 
-public class RegisterAcitiviry extends AppCompatActivity implements FlagmentRegist.OnFragmentInteractionListener{
+public class RegisterAcitiviry extends AppCompatActivity implements FragmentRegist.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +16,7 @@ public class RegisterAcitiviry extends AppCompatActivity implements FlagmentRegi
         if (savedInstanceState==null)
         {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.ContainerRegist, FlagmentRegist.newInstance())
+                    .add(R.id.ContainerRegist, FragmentRegist.newInstance())
                     .commit();
         }
     }

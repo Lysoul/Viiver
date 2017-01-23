@@ -3,24 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-
     android:orientation="vertical"
     tools:context="com.thuggerbrain.viiver.fragment.FragmentMain">
 
-    <TextView
-        android:layout_above="@+id/usernameRegist"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="italic"
-        android:text="Registrations"
-        android:textColor="@color/colorWhite"
-        android:textSize="26sp" />
 
 
 
 
 
         <LinearLayout
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">

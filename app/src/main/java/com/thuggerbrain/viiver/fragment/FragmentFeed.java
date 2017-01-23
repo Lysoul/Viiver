@@ -44,7 +44,7 @@ public class FragmentFeed extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_feed, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_cardsfeed, container, false);
         initInstances(rootView, savedInstanceState);
         Resources res = getResources();
         Drawable mDrawable = res.getDrawable(R.drawable.ic_error_outline_black_24dp);

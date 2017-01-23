@@ -2,6 +2,7 @@ package com.thuggerbrain.viiver.activity;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
@@ -14,10 +15,11 @@ import android.widget.ListView;
 
 import com.thuggerbrain.viiver.R;
 import com.thuggerbrain.viiver.adapter.ToggleListAdapter;
+import com.thuggerbrain.viiver.fragment.FragmentCardsFeed;
 import com.thuggerbrain.viiver.fragment.FragmentMain;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FragmentCardsFeed.OnFragmentInteractionListener{
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
@@ -121,5 +123,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }

@@ -110,13 +110,14 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
-       switch (item.getItemId())
+        switch (item.getItemId())
 
-       {case R.id.action_notification:
-           Intent gotoNotifications = new Intent(getApplicationContext(),NotificationsActivity.class);
-       startActivity(gotoNotifications);
-       return true;
-       }
+        {
+            case R.id.action_notification:
+                Intent gotoNotifications = new Intent(getApplicationContext(), NotificationsActivity.class);
+                startActivity(gotoNotifications);
+                return true;
+        }
 
 
         return super.onOptionsItemSelected(item);

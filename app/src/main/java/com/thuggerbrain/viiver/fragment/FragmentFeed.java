@@ -1,11 +1,19 @@
 package com.thuggerbrain.viiver.fragment;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.PopupMenu;
+import android.widget.Toast;
 
 import com.thuggerbrain.viiver.R;
 
@@ -42,6 +50,39 @@ public class FragmentFeed extends Fragment{
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_cardsfeed, container, false);
         initInstances(rootView, savedInstanceState);
+        ImageButton imageButton = (ImageButton) rootView.findViewById(R.id.morebtncards);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.M)
+            @Override
+            public void onClick(View v) {
+                switch (v.getId())
+                {
+                    case R.id.morebtncards:
+                            PopupMenu popupMenu = new PopupMenu(getActivity(), v, Gravity.END);
+                            MenuInflater menuInflater = popupMenu.getMenuInflater();
+                            menuInflater.inflate(R.menu.main_floatpopup, popupMenu.getMenu());
+                            popupMenu.show();
+
+                            popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                                @Override
+                                public boolean onMenuItemClick(MenuItem item) {
+                                    switch (item.getItemId()) {
+                                        case R.id.senderitembtn:
+                                            Toast.makeText(getActivity(), "Sender Button", Toast.LENGTH_LONG).show();
+                                            return true;
+                                        case R.id.deliverdefindlocatinobtn:
+                                            Toast.makeText(getActivity(), "Delivery Button", Toast.LENGTH_LONG).show();
+                                            return true;
+                                    }
+                                    return false;
+                                }
+                            });
+
+                    }
+                }
+
+
+        });
         return rootView;
     }
 

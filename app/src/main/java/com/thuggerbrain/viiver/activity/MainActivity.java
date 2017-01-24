@@ -2,29 +2,27 @@ package com.thuggerbrain.viiver.activity;
 
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.PopupMenu;
+import android.widget.Toast;
 
 import com.thuggerbrain.viiver.R;
 import com.thuggerbrain.viiver.adapter.ToggleListAdapter;
-import com.thuggerbrain.viiver.fragment.FragmentCardsFeed;
 import com.thuggerbrain.viiver.fragment.FragmentMain;
 
 
-public class MainActivity extends AppCompatActivity implements FragmentCardsFeed.OnFragmentInteractionListener{
-
-    private DrawerLayout drawerLayout;
-    private ActionBarDrawerToggle actionBarDrawerToggle;
-    private Toolbar toolbar;
-    private ListView listviewtoggle;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     String[] itemname = {
             "จัดการบัญชี",
@@ -36,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements FragmentCardsFeed
             "เกี่ยวกับเรา",
             "ออกจากระบบ"
     };
-
     Integer[] imgid = {
             R.drawable.ic_account_circle_black_24dp,
             R.drawable.ic_account_circle_black_24dp,
@@ -47,7 +44,10 @@ public class MainActivity extends AppCompatActivity implements FragmentCardsFeed
             R.drawable.ic_account_circle_black_24dp,
             R.drawable.ic_account_circle_black_24dp
     };
-
+    private DrawerLayout drawerLayout;
+    private ActionBarDrawerToggle actionBarDrawerToggle;
+    private Toolbar toolbar;
+    private ListView listviewtoggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +60,10 @@ public class MainActivity extends AppCompatActivity implements FragmentCardsFeed
                     .add(R.id.contentContainer, FragmentMain.newInstance())
                     .commit();
         }
-        setSupportActionBar(toolbar);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabmainbtn);
+        fab.setOnClickListener(this);
+
+
     }
 
 
@@ -124,8 +127,12 @@ public class MainActivity extends AppCompatActivity implements FragmentCardsFeed
         return super.onOptionsItemSelected(item);
     }
 
+
     @Override
-    public void onFragmentInteraction(Uri uri) {
+    public void onClick(View v) {
+
+
 
     }
+
 }

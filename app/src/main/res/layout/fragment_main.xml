@@ -38,23 +38,6 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 
-        <!--<android.support.design.widget.FloatingActionButton-->
-            <!--android:id="@+id/fabmainbtn"-->
-            <!--android:layout_width="56dp"-->
-            <!--android:layout_height="56dp"-->
-            <!--android:layout_alignParentBottom="true"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:layout_marginBottom="13dp"-->
-            <!--android:layout_marginRight="13dp"-->
-            <!--android:onClick="addNewNoteFunction"-->
-            <!--app:backgroundTint="@android:color/holo_red_dark"-->
-            <!--app:borderWidth="3dp"-->
-            <!--app:elevation="4dp"-->
-            <!--app:rippleColor="@android:color/holo_red_light"-->
-            <!--app:layout_behavior="com.thuggerbrain.viiver.activity.ScrollBehavior"-->
-            <!--app:srcCompat="@drawable/ic_plus_24dp" />-->
-
-
     </RelativeLayout>
     </LinearLayout>
 

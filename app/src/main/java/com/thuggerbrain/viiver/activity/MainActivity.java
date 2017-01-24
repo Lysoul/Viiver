@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements FragmentCardsFeed
                     .add(R.id.contentContainer, FragmentMain.newInstance())
                     .commit();
         }
-
+        setSupportActionBar(toolbar);
     }
 
 
@@ -68,7 +68,6 @@ public class MainActivity extends AppCompatActivity implements FragmentCardsFeed
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         listviewtoggle = (ListView) findViewById(R.id.listviewtoggle);
-
         listviewtoggle.setAdapter(new ToggleListAdapter(MainActivity.this, itemname, imgid));
 
 

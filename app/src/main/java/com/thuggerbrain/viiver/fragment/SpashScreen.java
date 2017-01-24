@@ -14,7 +14,7 @@ public class SpashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.spash_screen);
-     RunSpashcreen(3000);
+        RunSpashcreen(3000);
 
     }
 
@@ -26,8 +26,7 @@ public class SpashScreen extends AppCompatActivity {
             public void run() {
 
 
-
-                Intent objSpash = new Intent(getApplicationContext(),LoginActivity.class);
+                Intent objSpash = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(objSpash);
                 finish();
             }

@@ -1,9 +1,5 @@
 package com.thuggerbrain.viiver.fragment;
 
-import android.content.res.Resources;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffColorFilter;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -46,10 +42,6 @@ public class FragmentFeed extends Fragment{
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_cardsfeed, container, false);
         initInstances(rootView, savedInstanceState);
-        Resources res = getResources();
-        Drawable mDrawable = res.getDrawable(R.drawable.ic_error_outline_black_24dp);
-        mDrawable.setColorFilter(new PorterDuffColorFilter(0xffff00, PorterDuff.Mode.MULTIPLY));
-
         return rootView;
     }
 

@@ -22,7 +22,7 @@ import com.thuggerbrain.viiver.R;
  * Created by jakkavat on 1/15/2017 AD.
  */
 @SuppressWarnings("unused")
-public class FragmentMain extends Fragment implements View.OnClickListener {
+public class FragmentMain extends Fragment implements View.OnClickListener{
     private ViewPager viewPager;
     private TabLayout tabLayout;
 
@@ -60,6 +60,7 @@ public class FragmentMain extends Fragment implements View.OnClickListener {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         initInstances(rootView, savedInstanceState);
         FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fabmainbtn);
+        fab.setOnClickListener(this);
         fab.setOnClickListener(this);
 
         return rootView;
@@ -183,7 +184,6 @@ public class FragmentMain extends Fragment implements View.OnClickListener {
 
         }
     }
-
 
 
 }

@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private Toolbar toolbar;
     private ListView listviewtoggle;
+    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     .add(R.id.contentContainer, FragmentMain.newInstance())
                     .commit();
         }
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabmainbtn);
-        fab.setOnClickListener(this);
+
 
 
     }
@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         listviewtoggle = (ListView) findViewById(R.id.listviewtoggle);
         listviewtoggle.setAdapter(new ToggleListAdapter(MainActivity.this, itemname, imgid));
+        fab = (FloatingActionButton) findViewById(R.id.fabmainbtn);
 
 
         setSupportActionBar(toolbar);
@@ -85,6 +86,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 R.string.open_drawer,
                 R.string.close_drawer);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
+
+
+        fab.setOnClickListener(this);
 
     }
 
@@ -130,7 +134,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        if(v == fab){
+            Intent intent = new Intent(getApplicationContext(), OrderActivity.class);
+            startActivity(intent);
 
+        }
 
 
     }

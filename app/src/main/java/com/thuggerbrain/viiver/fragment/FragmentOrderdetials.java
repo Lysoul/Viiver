@@ -14,15 +14,15 @@ import com.thuggerbrain.viiver.R;
  * Created by jakkavat on 1/15/2017 AD.
  */
 @SuppressWarnings("unused")
-public class FragmentTracking extends Fragment {
+public class FragmentOrderdetials extends Fragment {
 
-    public FragmentTracking() {
+    public FragmentOrderdetials() {
         super();
     }
 
     @SuppressWarnings("unused")
-    public static FragmentTracking newInstance() {
-        FragmentTracking fragment = new FragmentTracking();
+    public static FragmentOrderdetials newInstance() {
+        FragmentOrderdetials fragment = new FragmentOrderdetials();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -40,7 +40,7 @@ public class FragmentTracking extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_tracking, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_order_detials, container, false);
         initInstances(rootView, savedInstanceState);
         return rootView;
     }

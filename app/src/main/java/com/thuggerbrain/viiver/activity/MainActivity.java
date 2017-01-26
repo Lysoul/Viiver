@@ -24,6 +24,13 @@ import com.thuggerbrain.viiver.fragment.FragmentMain;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    DrawerLayout drawerLayout;
+    ActionBarDrawerToggle actionBarDrawerToggle;
+    Toolbar toolbar;
+    ListView listviewtoggle;
+    FloatingActionButton fab;
+
+
     String[] itemname = {
             "จัดการบัญชี",
             "ออเดอร์ส่งของ",
@@ -44,11 +51,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             R.drawable.ic_account_circle_black_24dp,
             R.drawable.ic_account_circle_black_24dp
     };
-    private DrawerLayout drawerLayout;
-    private ActionBarDrawerToggle actionBarDrawerToggle;
-    private Toolbar toolbar;
-    private ListView listviewtoggle;
-    private FloatingActionButton fab;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    public void initInstances() {
+    private void initInstances() {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         listviewtoggle = (ListView) findViewById(R.id.listviewtoggle);

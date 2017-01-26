@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.thuggerbrain.viiver.R;
-import com.thuggerbrain.viiver.fragment.FragmentMain;
 import com.thuggerbrain.viiver.fragment.FragmentOrder;
 
 public class OrderActivity extends AppCompatActivity {

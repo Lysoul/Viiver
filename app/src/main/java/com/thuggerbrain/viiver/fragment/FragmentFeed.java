@@ -1,5 +1,6 @@
 package com.thuggerbrain.viiver.fragment;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -16,13 +17,14 @@ import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import com.thuggerbrain.viiver.R;
+import com.thuggerbrain.viiver.activity.InfodeliveryActivity;
 
 
 /**
  * Created by jakkavat on 1/15/2017 AD.
  */
 @SuppressWarnings("unused")
-public class FragmentFeed extends Fragment{
+public class FragmentFeed extends Fragment implements View.OnClickListener{
 
     public FragmentFeed() {
         super();
@@ -50,39 +52,10 @@ public class FragmentFeed extends Fragment{
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_cardsfeed, container, false);
         initInstances(rootView, savedInstanceState);
+        ImageButton infodetials = (ImageButton) rootView.findViewById(R.id.btninfodelivery);
+        infodetials.setOnClickListener(this);
         ImageButton imageButton = (ImageButton) rootView.findViewById(R.id.morebtncards);
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.M)
-            @Override
-            public void onClick(View v) {
-                switch (v.getId())
-                {
-                    case R.id.morebtncards:
-                            PopupMenu popupMenu = new PopupMenu(getActivity(), v, Gravity.END);
-                            MenuInflater menuInflater = popupMenu.getMenuInflater();
-                            menuInflater.inflate(R.menu.main_floatpopup, popupMenu.getMenu());
-                            popupMenu.show();
-
-                            popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                                @Override
-                                public boolean onMenuItemClick(MenuItem item) {
-                                    switch (item.getItemId()) {
-                                        case R.id.senderitembtn:
-                                            Toast.makeText(getActivity(), "Sender Button", Toast.LENGTH_LONG).show();
-                                            return true;
-                                        case R.id.deliverdefindlocatinobtn:
-                                            Toast.makeText(getActivity(), "Delivery Button", Toast.LENGTH_LONG).show();
-                                            return true;
-                                    }
-                                    return false;
-                                }
-                            });
-
-                    }
-                }
-
-
-        });
+        imageButton.setOnClickListener(this);
         return rootView;
     }
 
@@ -121,5 +94,38 @@ public class FragmentFeed extends Fragment{
     private void onRestoreInstanceState(Bundle savedInstanceState) {
         // Restore Instance State here
     }
+
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    @Override
+    public void onClick(View v) {
+        switch (v.getId())
+        {
+            case R.id.morebtncards:
+                PopupMenu popupMenu = new PopupMenu(getActivity(), v, Gravity.END);
+                MenuInflater menuInflater = popupMenu.getMenuInflater();
+                menuInflater.inflate(R.menu.main_floatpopup, popupMenu.getMenu());
+                popupMenu.show();
+
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.senderitembtn:
+                                Toast.makeText(getActivity(), "Calling", Toast.LENGTH_LONG).show();
+                                return true;
+                            case R.id.deliverdefindlocatinobtn:
+                                Toast.makeText(getActivity(), "", Toast.LENGTH_LONG).show();
+                                return true;
+                        }
+                        return false;
+                    }
+                });
+                break;
+            case R.id.btninfodelivery: Intent goinfodelivery = new Intent(v.getContext(),InfodeliveryActivity.class);
+                startActivity(goinfodelivery);
+                break;
+        }
+    }
+
 
 }

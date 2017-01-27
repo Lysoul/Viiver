@@ -21,12 +21,11 @@
         <activity
             android:name=".activity.LoginActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.MainActivity" />
+        <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.RegisterAcitiviry" />
         <activity android:name=".activity.NotificationsActivity" />
-        <activity android:name=".activity.OrderActivity"></activity>
-
+        <activity android:name=".activity.OrderActivity" />
+        <activity android:name=".activity.InfodeliveryActivity"></activity>
     </application>
 
 </manifest>

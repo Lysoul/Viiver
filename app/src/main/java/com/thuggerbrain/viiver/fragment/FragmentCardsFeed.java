@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 
 import com.thuggerbrain.viiver.R;
 
@@ -68,7 +67,6 @@ public class FragmentCardsFeed extends Fragment {
         // Inflate the layout for this fragment
 
         View v = inflater.inflate(R.layout.fragment_cardsfeed, container, false);
-
         return  v;
     }
 
@@ -95,6 +93,7 @@ public class FragmentCardsFeed extends Fragment {
         super.onDetach();
         mListener = null;
     }
+
 
     /**
      * This interface must be implemented by activities that contain this

@@ -1,13 +1,74 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.thuggerbrain.viiver.fragment.FragmentNotifications">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    android:orientation="vertical"
+   >
 
-</FrameLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="83dp">
+
+
+            <ImageView
+                android:id="@+id/picprofile"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_sample_profile" />
+
+            <TextView
+                android:id="@+id/topicnotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/picprofile"
+                android:text="Topic of notification"
+                android:textColor="@color/colorPrimary"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textnoficationcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topicnotification"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/colorSoftDark"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@id/picprofile"
+                android:gravity="center_vertical"
+                android:text="sing aospdkas assdsakpdaskdassdsakpdaskdassdsakpdaskd asdpoaskdas............................................"
+                android:textSize="11sp" />
+
+
+            <ImageView
+                android:id="@+id/notificationimg"
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_below="@id/picprofile"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/ic_location_24dp" />
+            <TextView
+                android:id="@+id/notificationtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/picprofile"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/notificationimg"
+                android:text="3 min ago"
+                android:textColor="@color/colorSoftDark"
+                android:textSize="9sp" />
+        </RelativeLayout>
+
+
+</LinearLayout>

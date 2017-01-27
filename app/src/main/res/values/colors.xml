@@ -6,4 +6,5 @@
     <color name="colorPrimaryDarkTS">#be00838f</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorGreen">#04ff00</color>
+    <color name="colorSoftDark">#666666</color>
 </resources>

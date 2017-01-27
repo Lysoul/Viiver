@@ -13,4 +13,13 @@
         <item name="colorControlActivated">@color/colorAccent</item>
     </style>
 
+    <style name="TabCustomview" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/colorSoftDark</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:fontFamily">Roboto Light</item>
+        <item name="android:textColorSecondary">@color/colorPrimary</item>
+    </style>
+
 </resources>

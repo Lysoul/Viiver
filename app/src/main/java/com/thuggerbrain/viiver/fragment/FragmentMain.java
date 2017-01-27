@@ -21,6 +21,7 @@ public class FragmentMain extends Fragment {
     private ViewPager viewPager;
     private TabLayout tabLayout;
 
+
     private int[] tabIcons = {
             R.drawable.ic_account_circle_black_24dp,
             R.drawable.ic_notifications_white_36dp,
@@ -152,4 +153,9 @@ public class FragmentMain extends Fragment {
         // Restore Instance State here
     }
 
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
 }

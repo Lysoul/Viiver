@@ -25,7 +25,7 @@
         <activity android:name=".activity.RegisterAcitiviry" />
         <activity android:name=".activity.NotificationsActivity" />
         <activity android:name=".activity.OrderActivity" />
-        <activity android:name=".activity.InfodeliveryActivity" android:theme="@style/AppTheme" android:label="Notifications">
+        <activity android:name=".activity.InfodeliveryActivity">
         </activity>
     </application>
 

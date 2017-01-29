@@ -19,7 +19,9 @@ public class NotificationsActivity extends AppCompatActivity {
         listViewnoti  = (ListView) findViewById(R.id.ContainerNotifications);
         listViewnoti.setAdapter(new NotificationListAdapter(getApplicationContext()));
         toolbar = (Toolbar) findViewById(R.id.toolbarnotifications);
+        toolbar.setTitle("Notifications");
         setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorWhite));
 
     }
 

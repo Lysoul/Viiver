@@ -13,15 +13,11 @@
         android:id="@+id/toolbarnotifications"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="visible"
-        android:title="Notifications"
-        android:titleTextColor="@color/colorWhite"
         android:background="@color/colorPrimary" />
 
 
     <ListView
         android:layout_margin="5dp"
-        android:layout_below="@id/toolbarnotifications"
         android:id="@+id/ContainerNotifications"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

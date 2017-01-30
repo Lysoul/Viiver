@@ -11,6 +11,8 @@ import android.view.View;
  * Created by Agisz on 1/24/2017 AD.
  */
 
+//This class use with btn motions hide
+
 public class ScrollBehavior extends FloatingActionButton.Behavior {
     public ScrollBehavior(Context context, AttributeSet attrs) {
         super(context, attrs);

@@ -20,9 +20,6 @@ public class NotificationsActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbarnotifications);
         toolbar.setTitle("Notifications");
         setSupportActionBar(toolbar);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         toolbar.setTitleTextColor(getResources().getColor(R.color.colorWhite));
 
     }

@@ -76,16 +76,12 @@ public class FragmentMain extends Fragment implements TabLayout.OnTabSelectedLis
             public Fragment getItem(int position) {
                 switch (position) {
                     case 0:
-
                         return FragmentProfile.newInstance();
                     case 1:
-
                         return FragmentFeed.newInstance();
                     case 2:
-
                         return FragmentContact.newInstance();
                     case 3:
-
                         return FragmentTracking.newInstance();
                     case 4:
                         return FragmentPreference.newInstance();

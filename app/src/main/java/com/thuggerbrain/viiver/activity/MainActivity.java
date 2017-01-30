@@ -1,9 +1,9 @@
 package com.thuggerbrain.viiver.activity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.widget.DrawerLayout;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -16,9 +16,7 @@ import com.thuggerbrain.viiver.fragment.FragmentMain;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    DrawerLayout drawerLayout;
     Toolbar toolbar;
-    FloatingActionButton fab;
 
 
 
@@ -40,16 +38,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private void initInstances() {
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        fab = (FloatingActionButton) findViewById(R.id.fabmainbtn);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        fab.setOnClickListener(this);
+
 
     }
-//
+
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -59,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
 
         switch (item.getItemId())
 
@@ -76,11 +88,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if(v == fab){
-            Intent intent = new Intent(getApplicationContext(), OrderActivity.class);
-            startActivity(intent);
-
-        }
 
 
     }

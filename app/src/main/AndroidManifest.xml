@@ -21,11 +21,7 @@
         <activity
             android:name=".activity.LoginActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.MainActivity" >       <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.DEFAULT" />
-        </intent-filter></activity>
+        <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.RegisterAcitiviry" />
         <activity android:name=".activity.NotificationsActivity" />
         <activity android:name=".activity.OrderActivity" />

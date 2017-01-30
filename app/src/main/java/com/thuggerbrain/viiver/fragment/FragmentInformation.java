@@ -14,15 +14,15 @@ import com.thuggerbrain.viiver.R;
  * Created by jakkavat on 1/15/2017 AD.
  */
 @SuppressWarnings("unused")
-public class FragmentOrderdetials extends Fragment {
+public class FragmentInformation extends Fragment {
 
-    public FragmentOrderdetials() {
+    public FragmentInformation() {
         super();
     }
 
     @SuppressWarnings("unused")
-    public static FragmentOrderdetials newInstance() {
-        FragmentOrderdetials fragment = new FragmentOrderdetials();
+    public static FragmentInformation newInstance() {
+        FragmentInformation fragment = new FragmentInformation();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;

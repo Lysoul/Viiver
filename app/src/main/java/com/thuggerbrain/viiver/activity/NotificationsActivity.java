@@ -15,7 +15,6 @@ public class NotificationsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notifications);
-
         listViewnoti  = (ListView) findViewById(R.id.ContainerNotifications);
         listViewnoti.setAdapter(new NotificationListAdapter(getApplicationContext()));
         toolbar = (Toolbar) findViewById(R.id.toolbarnotifications);

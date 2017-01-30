@@ -1,60 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarcontact"
-        android:layout_width="match_parent"
-        android:title="Contact"
-        android:layout_height="wrap_content">
-    </android.support.v7.widget.Toolbar>
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </android.support.design.widget.AppBarLayout>
-
-
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="83dp">
+
+
+            <ImageView
+                android:id="@+id/picprofile"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_sample_profile" />
+
+            <TextView
+                android:id="@+id/nameconact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/picprofile"
+                android:text="Keroaz agisz"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_below="@id/nameconact"
+                android:text="คนส่งของ"
+                android:layout_toRightOf="@id/picprofile"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/shape_rectangle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+            <ImageButton
+                android:background="@drawable/shape_circle"
+                android:color="@color/colorPrimary"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="33dp"
+                android:layout_marginRight="10dp"
+                app:srcCompat="@drawable/ic_phone_24dp"
+                android:layout_height="33dp" />
+        </RelativeLayout>
 
     </android.support.v7.widget.CardView>
 
-    <LinearLayout
-        android:gravity="bottom"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="-8dip"
-            android:layout_weight="1"
-            android:background="#ffffff"
-            android:text="ส่งแล้ว"
-            android:textColor="@color/colorPrimary" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="-8dip"
-            android:layout_weight="1"
-            android:background="#ffffff"
-            android:text="คนส่งของ"
-            android:textColor="@color/colorPrimary" />
-
-        <Button
-            android:id="@+id/customercontact"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="-8dip"
-            android:layout_weight="1"
-            android:background="#ffffff"
-            android:text="ลูกค้า"
-            android:textColor="@color/colorPrimary" />
-
-    </LinearLayout>
 
 
 </LinearLayout>

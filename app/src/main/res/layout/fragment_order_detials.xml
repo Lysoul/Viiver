@@ -2,34 +2,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     android:orientation="vertical">
 
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_sample_profile" />
+
+
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal"
         android:padding="10dp">
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_gravity="center"
             android:text="รหัสผู้ส่ง"
+            android:layout_margin="3dp"
             android:textColor="@color/colorPrimary"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="D10112"
+            android:layout_margin="3dp"
             android:textColor="#7b7b7b"
             android:textSize="16sp" />
 
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -79,6 +89,7 @@
             android:textSize="16sp" />
 
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -249,8 +260,6 @@
     </LinearLayout>
 
 
-
-
-
-
 </LinearLayout>
+
+

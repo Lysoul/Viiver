@@ -96,13 +96,12 @@ public class FragmentMain extends Fragment {
             public CharSequence getPageTitle(int position) {
                 switch (position) {
                     case 0:
-                        return "Profile";
                     case 1:
-                        return "Feed";
+
                     case 2:
-                        return "Contact";
+
                     case 3:
-                        return "Tracking";
+
                     default:
                         return "";
                 }

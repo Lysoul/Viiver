@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -61,7 +62,7 @@
             android:layout_alignRight="@id/imgProfile"
             android:layout_alignTop="@id/tvUsername"
             android:layout_marginRight="8dp"
-            android:background="@drawable/ic_account_circle_black_24dp" />
+            android:background="@drawable/ic_account_24dp" />
 
 
         <ImageButton
@@ -70,7 +71,7 @@
             android:layout_alignTop="@id/ibtnFollow"
             android:layout_marginRight="8dp"
             android:layout_toLeftOf="@id/ibtnFollow"
-            android:background="@drawable/ic_account_circle_black_24dp" />
+            android:background="@drawable/ic_account_24dp" />
 
         <Button
             android:id="@+id/btnCall"
@@ -174,7 +175,7 @@
                             android:layout_alignRight="@id/imgProfile"
                             android:layout_alignTop="@id/tvUsername"
                             android:layout_marginRight="8dp"
-                            android:background="@drawable/ic_account_circle_black_24dp" />
+                            android:background="@drawable/ic_info_24dp" />
 
                         <ImageView
                             android:id="@+id/sdProfileimage"

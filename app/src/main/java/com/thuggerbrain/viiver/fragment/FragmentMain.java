@@ -17,16 +17,17 @@ import com.thuggerbrain.viiver.R;
  * Created by jakkavat on 1/15/2017 AD.
  */
 @SuppressWarnings("unused")
-public class FragmentMain extends Fragment {
+public class FragmentMain extends Fragment implements TabLayout.OnTabSelectedListener {
     private ViewPager viewPager;
     private TabLayout tabLayout;
 
 
     private int[] tabIcons = {
-            R.drawable.ic_account_circle_black_24dp,
-            R.drawable.ic_notifications_white_36dp,
+            R.drawable.ic_account_24dp,
+            R.drawable.ic_feed_24dp,
             R.drawable.ic_contacts_24dp,
-            R.drawable.ic_notifications_white_36dp
+            R.drawable.ic_tracking_24dp,
+            R.drawable.ic_more_horiz_24dp
 
     };
 
@@ -75,13 +76,19 @@ public class FragmentMain extends Fragment {
             public Fragment getItem(int position) {
                 switch (position) {
                     case 0:
+
                         return FragmentProfile.newInstance();
                     case 1:
+
                         return FragmentFeed.newInstance();
                     case 2:
+
                         return FragmentContact.newInstance();
                     case 3:
+
                         return FragmentTracking.newInstance();
+                    case 4:
+                        return FragmentPreference.newInstance();
                     default:
                         return null;
                 }
@@ -89,7 +96,7 @@ public class FragmentMain extends Fragment {
 
             @Override
             public int getCount() {
-                return 4;
+                return 5;
             }
 
             @Override
@@ -97,10 +104,9 @@ public class FragmentMain extends Fragment {
                 switch (position) {
                     case 0:
                     case 1:
-
                     case 2:
-
                     case 3:
+                    case 4:
 
                     default:
                         return "";
@@ -122,6 +128,7 @@ public class FragmentMain extends Fragment {
         tabLayout.getTabAt(1).setIcon(tabIcons[1]);
         tabLayout.getTabAt(2).setIcon(tabIcons[2]);
         tabLayout.getTabAt(3).setIcon(tabIcons[3]);
+        tabLayout.getTabAt(4).setIcon(tabIcons[4]);
     }
 
 
@@ -156,5 +163,20 @@ public class FragmentMain extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+    }
+
+    @Override
+    public void onTabSelected(TabLayout.Tab tab) {
+
+    }
+
+    @Override
+    public void onTabUnselected(TabLayout.Tab tab) {
+
+    }
+
+    @Override
+    public void onTabReselected(TabLayout.Tab tab) {
+
     }
 }

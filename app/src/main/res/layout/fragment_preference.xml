@@ -1,7 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/colorPrimary"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_column="3"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_column="2"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:layout_row="0"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center_horizontal"
+
+                android:src="@drawable/ic_sample_profile" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgProfile"
+                android:layout_gravity="left|bottom"
+                android:text="Keroaz Agisz" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_phone_24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0631315848"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/button3"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_column="0"
+
+                android:layout_row="0"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/shape_rectangle"
+                android:text="Button"
+                app:srcCompat="@drawable/ic_account_24dp" />
+            <TextView
+                android:layout_below="@id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="setting"/>
+
+            <ImageButton
+                android:id="@+id/button1"
+                android:layout_width="44dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="44dp"
+                android:layout_column="1"
+
+                android:layout_row="0"
+                android:background="@drawable/shape_rectangle"
+                android:text="Button" />
+            <TextView
+                android:layout_below="@id/button1"
+                android:text="Order List"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/button2"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_column="2"
+                android:layout_row="0"
+                android:background="@drawable/shape_rectangle"
+                android:text="Button"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@drawable/ic_accountwallet_24dp" />
+            <TextView
+                android:layout_below="@id/button2"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wallet"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</GridLayout>

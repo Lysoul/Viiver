@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Toolbar toolbar;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,10 +39,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-
-
 
     }
 
@@ -87,6 +81,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        //take picture
+//        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+//        startActivity(intent);
 
     }
 

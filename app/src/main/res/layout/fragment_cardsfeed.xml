@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.thuggerbrain.viiver.fragment.FragmentCardsFeed">
+    tools:context="com.thuggerbrain.viiver.fragment.FragmentCardsFeed"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp">
+        android:layout_margin="16dp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -55,36 +57,11 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:padding="3dp"
+                        android:padding="5dp"
                         android:layout_height="wrap_content">
+
+
                         <ImageView
-                            android:id="@+id/picprofile"
-                            android:layout_width="46dp"
-                            android:layout_marginLeft="15dp"
-                            android:layout_height="46dp"
-                            android:src="@drawable/ic_sample_profile" />
-
-                        <TextView
-                            android:layout_below="@+id/picprofile"
-                            android:layout_width="wrap_content"
-                            android:id="@+id/nameofuser"
-                            android:textSize="11sp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Nan nakojump" />
-
-
-                        <RatingBar
-                            android:layout_below="@+id/nameofuser"
-                            style="?android:attr/ratingBarStyleSmall"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:isIndicator="true"
-                            android:theme="@style/RatingBar"
-                            android:numStars="5"
-                            android:stepSize="0.1" />
-                        <ImageView
-                            android:layout_marginTop="16dp"
                             android:id="@+id/picdestinations"
                             android:layout_centerHorizontal="true"
                             android:layout_width="18dp"
@@ -121,14 +98,35 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:orientation="horizontal">
-
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_sampleprofile_backgroud"
-                        android:background="@color/colorPrimary"
-                        android:scaleType="centerCrop" />
+                        android:scaleType="centerCrop"
+                        android:id="@+id/picprofile"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_sample_profile" />
+
+                    <TextView
+                        android:layout_below="@+id/picprofile"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/nameofuser"
+                        android:textSize="11sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Nan nakojump" />
+                    <RatingBar
+                        android:layout_below="@+id/nameofuser"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:layout_centerHorizontal="true"
+                        android:theme="@style/RatingBar"
+                        android:numStars="5"
+                        android:stepSize="0.1" />
+
+
                     <ImageView
                         android:layout_margin="3dp"
                         android:layout_alignParentBottom="true"

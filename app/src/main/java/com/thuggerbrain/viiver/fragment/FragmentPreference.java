@@ -43,6 +43,7 @@ public class FragmentPreference extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_preference, container, false);
         initInstances(rootView, savedInstanceState);
         return rootView;
+
     }
 
     private void init(Bundle savedInstanceState) {
@@ -52,6 +53,8 @@ public class FragmentPreference extends Fragment {
     @SuppressWarnings("UnusedParameters")
     private void initInstances(View rootView, Bundle savedInstanceState) {
         // Init 'View' instance(s) with rootView.findViewById here
+
+
     }
 
     @Override
@@ -80,5 +83,7 @@ public class FragmentPreference extends Fragment {
     private void onRestoreInstanceState(Bundle savedInstanceState) {
         // Restore Instance State here
     }
+
+
 
 }

@@ -6,7 +6,8 @@
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
-        android:layout_margin="16dp"
+        android:layout_marginTop="2dp"
+        android:id="@+id/contactlistview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <RelativeLayout
@@ -36,21 +37,13 @@
             <TextView
                 android:layout_below="@id/nameconact"
                 android:text="คนส่งของ"
+                android:padding="1dp"
                 android:layout_toRightOf="@id/picprofile"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/shape_rectangle"
                 android:layout_width="wrap_content"
                 android:textColor="@color/colorPrimary"
                 android:layout_height="wrap_content" />
-            <ImageButton
-                android:background="@drawable/shape_circle"
-                android:color="@color/colorPrimary"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_width="33dp"
-                android:layout_marginRight="10dp"
-                app:srcCompat="@drawable/ic_phone_24dp"
-                android:layout_height="33dp" />
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>

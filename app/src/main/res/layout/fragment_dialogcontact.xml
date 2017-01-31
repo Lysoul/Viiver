@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/picprofile"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sample_profile" />
+
+        <TextView
+            android:layout_below="@+id/picprofile"
+            android:layout_width="wrap_content"
+            android:id="@+id/nameofuser"
+            android:textSize="11sp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Nan nakojump" />
+        <RatingBar
+            android:layout_below="@+id/nameofuser"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:layout_centerHorizontal="true"
+            android:theme="@style/RatingBar"
+            android:numStars="5"
+            android:stepSize="0.1" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_accounthome_24dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_accounthome_24dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:layout_margin="20dp"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/shape_circle"
+            app:srcCompat="@drawable/ic_phone_24dp"/>
+
+        <ImageButton
+            android:layout_margin="20dp"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/shape_circle"
+            app:srcCompat="@drawable/ic_phone_24dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -3,7 +3,9 @@ package com.thuggerbrain.viiver.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
@@ -18,6 +20,7 @@ import com.thuggerbrain.viiver.R;
 public class FragmentContact extends Fragment {
 
     ListView listviewcontact;
+
     public FragmentContact() {
         super();
     }
@@ -44,6 +47,23 @@ public class FragmentContact extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_contact, container, false);
         initInstances(rootView, savedInstanceState);
+
+        final FragmentManager fragmentManager = getFragmentManager();
+        final Fragment_ContactDialog contactDialog = new Fragment_ContactDialog();
+        View contact = rootView.findViewById(R.id.contactlistview);
+        contact.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        contactDialog.show(fragmentManager,"FramentContact");
+                        break;
+                }
+
+                return false;
+            }
+        });
+
         return rootView;
     }
 
@@ -53,7 +73,8 @@ public class FragmentContact extends Fragment {
 
     @SuppressWarnings("UnusedParameters")
     private void initInstances(View rootView, Bundle savedInstanceState) {
-        // Init 'View' instance(s) with rootView.findViewById here
+        // Init 'View' instance(s) with rootView.findViewById
+
     }
 
     @Override
@@ -82,7 +103,6 @@ public class FragmentContact extends Fragment {
     private void onRestoreInstanceState(Bundle savedInstanceState) {
         // Restore Instance State here
     }
-
 
 
 }

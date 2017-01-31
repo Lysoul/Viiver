@@ -1,15 +1,16 @@
 package com.thuggerbrain.viiver.fragment;
 
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -17,14 +18,14 @@ import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import com.thuggerbrain.viiver.R;
-import com.thuggerbrain.viiver.activity.InfodeliveryActivity;
 
 
 /**
  * Created by jakkavat on 1/15/2017 AD.
  */
 @SuppressWarnings("unused")
-public class FragmentFeed extends Fragment implements View.OnClickListener{
+public class FragmentFeed extends Fragment implements View.OnClickListener {
+
 
     public FragmentFeed() {
         super();
@@ -52,10 +53,23 @@ public class FragmentFeed extends Fragment implements View.OnClickListener{
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_cardsfeed, container, false);
         initInstances(rootView, savedInstanceState);
+        final FragmentManager fragmentManager = getFragmentManager();
+        final Fragment_DetailsDriverDialog infouser = new Fragment_DetailsDriverDialog();
         ImageButton infodetials = (ImageButton) rootView.findViewById(R.id.btninfodelivery);
-        infodetials.setOnClickListener(this);
-        ImageButton imageButton = (ImageButton) rootView.findViewById(R.id.morebtncards);
-        imageButton.setOnClickListener(this);
+        infodetials.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        infouser.show(fragmentManager, "FramentContact");
+                        break;
+                }
+
+                return false;
+            }
+        });
+        ImageButton morebtn = (ImageButton) rootView.findViewById(R.id.morebtncards);
+        morebtn.setOnClickListener(this);
         return rootView;
     }
 
@@ -98,8 +112,7 @@ public class FragmentFeed extends Fragment implements View.OnClickListener{
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onClick(View v) {
-        switch (v.getId())
-        {
+        switch (v.getId()) {
             case R.id.morebtncards:
                 PopupMenu popupMenu = new PopupMenu(getActivity(), v, Gravity.END);
                 MenuInflater menuInflater = popupMenu.getMenuInflater();
@@ -121,9 +134,7 @@ public class FragmentFeed extends Fragment implements View.OnClickListener{
                     }
                 });
                 break;
-            case R.id.btninfodelivery: Intent goinfodelivery = new Intent(v.getContext(),InfodeliveryActivity.class);
-                startActivity(goinfodelivery);
-                break;
+
         }
     }
 

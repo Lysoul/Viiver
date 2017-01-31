@@ -5,10 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context="com.thuggerbrain.viiver.activity.InfodeliveryActivity">
+    tools:context="com.thuggerbrain.viiver.fragment.Fragment_DetailsDriverDialog">
 
     <fragment
-        android:id="@+id/Containerdevinfo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:name="com.thuggerbrain.viiver.fragment.FragmentInformation"

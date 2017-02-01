@@ -1,13 +1,16 @@
 package com.thuggerbrain.viiver.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.thuggerbrain.viiver.R;
+import com.thuggerbrain.viiver.activity.AccountSettingActivity;
 
 
 /**
@@ -15,6 +18,7 @@ import com.thuggerbrain.viiver.R;
  */
 @SuppressWarnings("unused")
 public class FragmentPreference extends Fragment {
+    private ImageButton acountSetting;
 
     public FragmentPreference() {
         super();
@@ -41,7 +45,21 @@ public class FragmentPreference extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_preference, container, false);
+
         initInstances(rootView, savedInstanceState);
+        acountSetting = (ImageButton) rootView.findViewById(R.id.imbtnAccountSetting);
+        acountSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (v.getId())
+                {
+                    case R.id.imbtnAccountSetting:
+                        Intent gotoAccountSetting = new Intent(getActivity().getApplicationContext(), AccountSettingActivity.class);
+                        startActivity(gotoAccountSetting);
+                        break;
+                }
+            }
+        });
         return rootView;
 
     }
@@ -83,7 +101,6 @@ public class FragmentPreference extends Fragment {
     private void onRestoreInstanceState(Bundle savedInstanceState) {
         // Restore Instance State here
     }
-
 
 
 }

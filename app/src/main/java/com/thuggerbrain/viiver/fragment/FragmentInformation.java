@@ -40,7 +40,7 @@ public class FragmentInformation extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_order_detials, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_detailsdelivery, container, false);
         initInstances(rootView, savedInstanceState);
         return rootView;
     }

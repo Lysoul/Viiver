@@ -6,16 +6,11 @@ import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.PopupMenu;
-import android.widget.Toast;
 
 import com.thuggerbrain.viiver.R;
 
@@ -63,6 +58,7 @@ public class FragmentFeed extends Fragment implements View.OnClickListener {
                     case MotionEvent.ACTION_DOWN:
                         infouser.show(fragmentManager, "FramentContact");
                         break;
+
                 }
 
                 return false;
@@ -113,27 +109,8 @@ public class FragmentFeed extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.morebtncards:
-                PopupMenu popupMenu = new PopupMenu(getActivity(), v, Gravity.END);
-                MenuInflater menuInflater = popupMenu.getMenuInflater();
-                menuInflater.inflate(R.menu.main_floatpopup, popupMenu.getMenu());
-                popupMenu.show();
+            case R.id.morebtncards:break;
 
-                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        switch (item.getItemId()) {
-                            case R.id.senderitembtn:
-                                Toast.makeText(getActivity(), "Calling", Toast.LENGTH_LONG).show();
-                                return true;
-                            case R.id.deliverdefindlocatinobtn:
-                                Toast.makeText(getActivity(), "", Toast.LENGTH_LONG).show();
-                                return true;
-                        }
-                        return false;
-                    }
-                });
-                break;
 
         }
     }

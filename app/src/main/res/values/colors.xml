@@ -7,5 +7,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorGreen">#04ff00</color>
     <color name="colorSoftDark">#666666</color>
+    <color name="colorBlueText">#0080ff</color>
     <color name="colorTransparency">#00ffffff</color>
 </resources>

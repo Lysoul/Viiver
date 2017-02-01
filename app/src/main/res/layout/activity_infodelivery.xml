@@ -11,6 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:name="com.thuggerbrain.viiver.fragment.FragmentInformation"
-        tools:layout="@layout/fragment_order_detials" />
+        tools:layout="@layout/fragment_detailsdelivery" />
 
 </ScrollView>
